@@ -1,16 +1,29 @@
 {
   "name": "calculator",
+  "ProductName": "Calculator",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "watch": "nodemon --exec electron ."
+    "watch": "nodemon --exec electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "calculator",
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^22.1.0",
     "electron-window-state": "^5.0.3"
+  },
+  "devDependencies": {
+    "electron": "^22.1.0",
+    "electron-builder": "^19.16.1"
   }
 }
